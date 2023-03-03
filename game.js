@@ -34,7 +34,11 @@ export const game = {
         for (let i = 0; i < num; i++) {
             const rand = Math.floor(Math.random() * (deck.length - 0 + 1) + 0);
             const card = deck.splice(rand, 1);
-            cards.push(...card);
+            if (card) {
+                cards.push(...card);
+            } else {
+                i--;
+            };
         };
         return cards;
     },
