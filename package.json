@@ -1,0 +1,21 @@
+{
+  "name": "blackjack",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "server": "node server.js"
+  },
+  "keywords": [],
+  "author": "Henrique Pardinho",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "http": "^0.0.1-security",
+    "inquirer": "^9.1.4",
+    "socket.io": "^4.6.1",
+    "socket.io-client": "^4.6.1"
+  }
+}
