@@ -50,8 +50,7 @@ const tools = {
         return tools.dealer({ match, player: match.players[0] });
     },
     dealer: async ({ match, player, answer }) => {
-        let idx = match.players.findIndex(e=> e.id === player.id);
-        
+        let idx = match.players.findIndex(e=> e.id === player.id);        
 
         if (answer && !match.ended) {
 
@@ -89,21 +88,6 @@ const tools = {
         } else if (match.ended) {
             tools.finish_turn({ match, idx });
         };
-        
-        // while (!match.ended || idx === (match.players.length-1)) {
-            // console.log("vai perguntar")
-            // io.to(player.id).emit("ask_to_player", { match, player: match.players[idx] });
-            // const answer = await tools.ask_to_player({ match, player: match.players[idx] });
-            // console.log("perguntou", answer)
-            // if (answer) {
-            //     match.players[idx].cards.push({
-            //         suit: game.suits.diamonds,
-            //         number: 5
-            //     });
-            // } else {
-            //     idx++;
-            // };
-        // };
     },
     finish_turn: async ({ match, idx }) => {
             // const winner = match.players.sort((a,b)=> game.sum_cards(a).value-game.sum_cards(b).value).pop();
