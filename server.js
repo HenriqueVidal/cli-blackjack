@@ -22,7 +22,7 @@ const tools = {
             socket.join(match.id);
             io.to(player.id).emit("joined_to_game", { match_id, player });
 
-            if (match.players.length === 3) {
+            if (match.players.length === 4) {
                 tools.start_match({ match });
             };
         } else {
