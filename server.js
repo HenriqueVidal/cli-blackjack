@@ -110,7 +110,7 @@ const tools = {
             match.deck = game.gen_deck();
             match.players.forEach(e=> {
                 if (e.id === winner.id) {
-                    e.cash += 10;
+                    e.cash += (10*(match.players.length-1));
                 } else { 
                     e.cash -= 10; 
                 };
